@@ -21,9 +21,9 @@
     <Icon Id="ShareFileIcon.ico" SourceFile="$(var.SourcePathAssets)\sf-icon.ico"/>
     <Property Id="ARPPRODUCTICON" Value="ShareFileIcon.ico" />
 
-    <PropertyRef Id="NETFRAMEWORK45"/>
-    <Condition Message="This setup requires Microsoft .NET Framework 4.5 package or greater needs to be installed for this installation to continue.">
-      <![CDATA[Installed OR NETFRAMEWORK45]]>
+    <PropertyRef Id="WIX_IS_NETFRAMEWORK_48_OR_LATER_INSTALLED"/>
+    <Condition Message="This setup requires Microsoft .NET Framework 4.8 package or greater to be installed for this installation to continue.">
+      <![CDATA[Installed OR WIX_IS_NETFRAMEWORK_48_OR_LATER_INSTALLED]]>
     </Condition>
 
     <PropertyRef Id="POWERSHELLVERSION"/>
